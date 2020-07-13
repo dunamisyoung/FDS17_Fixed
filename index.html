@@ -1,9 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- (DTD) -->
+<html lang="ko-kr">
+  <!-- <html lang = "ko-KR">로 사용해라. -->
+  <!-- 접근성 웹표준에 근거해서 사용 : 스크린리더(몸이불편한 이들을 위한것들 음성지원)-->
+  <!-- attribute vs property -->
+
   <head>
     <meta charset="UTF-8" />
+    <!-- header charset -"EUC-KR 로 사용했었다. => title의 위치와 meta tag의 위치를 햇갈리지 않게끔 작성하여야한다."  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>웹카페-고정형 레이아웃</title>
+    <!-- SEO 검색최적화. title은 중복되지 않는 데이터를 입력하도록 한다. -->
   </head>
-  <body></body>
+
+  <body>
+    <div>
+      <header>헤더</header>
+      <div>비주얼</div>
+      <main>메인 콘텐츠</main>
+      <article>슬로건</article>
+      <footer>푸터</footer>
+    </div>
+    <!-- abbr : 약어를 풀어서 설명해주는 태그 -->
+    <!-- wrap -->
+
+    <!-- 
+      nav가 header안에 들어가있는지
+      안들어가있는지에 따라 구분되는것일수도있다.
+    3단구조
+    <header></header>
+    <div class="visual"></div>
+    <main></main>
+    <article>
+      독립적 성향을 내포하며, rss code를 내포하는 문서를 의미하기도한다.
+    </article>
+    <footer></footer> -->
+
+    <!-- 
+    4단구조
+    <header></header>
+    <nav></nav>
+    <main></main>
+    <aside></aside>
+    <footer></footer> -->
+  </body>
 </html>
