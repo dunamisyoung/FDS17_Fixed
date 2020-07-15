@@ -7,12 +7,6 @@
   box-sizing: border-box;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
 html {
   font-size: 10px;
 }
@@ -26,7 +20,11 @@ body {
 }
 
 /* 레이아웃 */
+
 .container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   background-color: #ddd;
 }
 
@@ -36,7 +34,6 @@ body {
 .slogan,
 .footer {
   width: 940px;
-  margin: 0 auto;
 }
 
 .header {
@@ -51,13 +48,12 @@ body {
 /* 메인 콘텐츠 */
 .main {
   background-color: blue;
-  padding: 30px 15px;
   min-height: 450px;
-}
-
-.group {
-  float: left;
-  margin: 0 15px;
+  padding: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .group1 {
@@ -75,16 +71,16 @@ body {
   width: 190px;
 }
 
-.clearfix {
-  clear: both;
-}
-
 .slogan {
   background-color: orange;
 }
 
 .footer-bg {
+  width: 100%;
   background-color: purple;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
 .footer {
