@@ -1,0 +1,42 @@
+.wrapper {
+  background-color: yellow;
+  border: 5px solid blue;
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.wrapper div {
+  border: 1px solid red;
+  background-color: pink;
+  width: 200px;
+  height: 50px;
+  flex-basis: 200px;
+}
+
+.box1 {
+  flex-grow: 1;
+  /* 부모의 너비값에 10분의 1값이 된다. */
+}
+
+.box2 {
+  flex-grow: 2;
+  /* 부모의 너비값에 10분의 2값이 된다. */
+}
+
+.box3 {
+  flex-grow: 3;
+  order: -1;
+  /* 부모의 너비값에 10분의 3값이 된다. */
+}
+
+.box4 {
+  flex-grow: 1;
+  /* 부모의 너비값에 10분의 1값이 된다. */
+}
+
+.box5 {
+  flex-grow: 3;
+  /* 부모의 너비값에 10분의 3값이 된다. */
+}
