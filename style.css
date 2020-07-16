@@ -19,6 +19,17 @@ body {
   background-color: #fff;
 }
 
+/* 숨김 콘텐츠 */
+.a11y-hidden {
+  background-color: #f00;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
 /* 링크 스타일 */
 a {
   text-decoration: none;
@@ -53,8 +64,8 @@ a {
 /* logo */
 .logo {
   position: absolute;
-  top: 45px;
-  left: 65px;
+  top: 30px;
+  left: 60px;
 }
 
 /* 멤버링크 */
@@ -86,6 +97,46 @@ a {
   text-transform: uppercase;
   /* background-color: #fcf; */
   padding: 2px 8px 2px 3px;
+}
+
+/* 메인메뉴 */
+.menu {
+  background: #db5629 linear-gradient(to bottom, #ef962f 0%, #db5629 35%, #db5629 70%, #ef962f 100%);
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 50px;
+  padding-left: 225px;
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+}
+
+.menu::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.menu-item {
+  float: left;
+  /* background-color: blue; */
+}
+
+.btn-menu {
+  background-color: transparent;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border: 0;
+  border-left: 2px solid rgba(255, 255, 255, 0.85);
+  padding: 15px 20px;
+  cursor: pointer;
+  text-shadow: 1px 0px 0px #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
+}
+
+.sub-menu {
+  background-color: pink;
+  position: absolute;
+  display: none;
 }
 
 .visual {
