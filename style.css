@@ -1,5 +1,6 @@
 @import url(css/normalize.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(./css/fontello.css);
 
 *,
 *::before,
@@ -41,6 +42,7 @@ a {
 .container {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: flex-end;
   align-items: center;
   background-color: #ddd;
 }
@@ -89,9 +91,10 @@ a {
   font-size: 1.4rem;
 }
 
+/* 
 .member [aria-hidden] {
-  /* margin: 0 5px; */
-}
+  margin: 0 5px;
+} */
 
 .member a {
   text-transform: uppercase;
@@ -102,12 +105,12 @@ a {
 /* 메인메뉴 */
 .menu {
   background: #db5629 linear-gradient(to bottom, #ef962f 0%, #db5629 35%, #db5629 70%, #ef962f 100%);
-  padding-left: 0;
   list-style: none;
-  margin-bottom: 50px;
+  margin: 0 0 35px;
   padding-left: 225px;
   border-top: 2px solid #000;
   border-radius: 0 0 5px 5px;
+  height: 50px;
 }
 
 .menu::after {
@@ -118,6 +121,7 @@ a {
 
 .menu-item {
   float: left;
+  position: relative;
   /* background-color: blue; */
 }
 
@@ -128,14 +132,91 @@ a {
   font-size: 1.6rem;
   border: 0;
   border-left: 2px solid rgba(255, 255, 255, 0.85);
-  padding: 15px 20px;
+  padding: 0 20px;
+  line-height: 48px;
   cursor: pointer;
   text-shadow: 1px 0px 0px #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
 }
 
+.menu-act .btn-menu {
+  color: #ff0;
+}
+
+.menu-act .btn-menu::after {
+  content: '';
+  display: block;
+  background-color: #000;
+  height: 2px;
+}
+
 .sub-menu {
-  background-color: pink;
+  /* background-color: pink; */
   position: absolute;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  white-space: nowrap;
+  /* white-space : nowrap = 강제 줄바꿈 금지 */
+}
+
+.sub-menu li,
+.sub-menu a {
+  display: inline-block;
+}
+
+.sub-menu a {
+  /* background-color: yellow; */
+  padding: 8px 0;
+  margin-left: 1em;
+}
+
+.sub-menu a::before {
+  content: '\f192';
+  font-family: 'fontello';
+  display: inline-block;
+  width: 1em;
+  margin-right: .2em;
+  margin-left: .2em;
+}
+
+.sub-menu a:hover::before,
+.sub-menu a:focus::before {
+  content: '\e800';
+}
+
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+  left: 0;
+}
+
+.sub-menu3,
+.sub-menu4,
+.sub-menu5 {
+  right: 0;
+}
+
+.sub-menu1 {
+  display: block;
+}
+
+.sub-menu2 {
+  display: none;
+}
+
+.sub-menu3 {
+  display: none;
+}
+
+.sub-menu4 {
+  display: none;
+}
+
+.sub-menu5 {
+  display: none;
+}
+
+.sub-menu6 {
   display: none;
 }
 
