@@ -1,6 +1,7 @@
 @import url(css/normalize.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(./css/fontello.css);
+/* @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css); */
 
 *,
 *::before,
@@ -17,7 +18,7 @@ body {
   font-size: 1.4rem;
   font-weight: 300;
   color: #181818;
-  background-color: #fff;
+  background: url(./css/images/bg_flower.png) no-repeat 50% 0 scroll, linear-gradient(to bottom, #ccc 0%, #fff 70%, #fff 100%), #fff;
 }
 
 /* 숨김 콘텐츠 */
@@ -44,7 +45,6 @@ a {
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: center;
-  background-color: #ddd;
 }
 
 .header,
@@ -190,9 +190,9 @@ a {
   left: 0;
 }
 
-.sub-menu3,
 .sub-menu4,
-.sub-menu5 {
+.sub-menu5,
+.sub-menu6 {
   right: 0;
 }
 
@@ -218,11 +218,72 @@ a {
 
 .sub-menu6 {
   display: none;
+  text-align: center;
+}
+
+/* 비주얼 */
+@keyframes textAni {
+  0% {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0);
+    /* padding-top: 0; */
+    /* padding-left: 0; */
+    transform: translate(0, 0);
+  }
+
+  100% {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+    /* padding-top: 70px; */
+    /* padding-left: 400px; */
+    transform: translate(400px, 75px);
+    /* transform: translate(50%, 100%); 자기자신의 크기를 기반으로 움직인다.*/
+  }
+}
+
+@keyframes bgAni {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .visual {
   height: 120px;
-  background-color: lime;
+  position: relative;
+}
+
+.visual::before,
+.visual::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-repeat: no-repeat;
+  animation: bgAni 2000ms ease-in-out infinite alternate;
+}
+
+.visual::before {
+  background-image: url(./css/images/ani_flower_01.png), url(./css/images/ani_flower_02.png);
+  background-position: 0 -10px, 670px 0;
+}
+
+.visual::after {
+  background-image: url(./css/images/ani_flower_03.png), url(./css/images/ani_flower_04.png);
+  background-position: 300px 0, 800px 20px;
+  animation-delay: 1000ms;
+}
+
+.visual-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.4rem;
+  width: 500px;
+  animation: textAni 5000ms ease-in-out forwards;
 }
 
 /* 메인 콘텐츠 */
