@@ -18,11 +18,13 @@ body {
   font-size: 1.4rem;
   font-weight: 300;
   color: #181818;
-  background: url(./css/images/bg_flower.png) no-repeat 50% 0 scroll, linear-gradient(to bottom, #ccc 0%, #fff 70%, #fff 100%), #fff;
+  background: url(./css/images/bg_flower.png) no-repeat 50% 0 scroll,
+    linear-gradient(to bottom, #ccc 0%, #fff 70%, #fff 100%), #fff;
 }
 
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden,
+legend {
   background-color: #f00;
   position: absolute;
   width: 1px;
@@ -30,6 +32,13 @@ body {
   overflow: hidden;
   margin: -1px;
   clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+/* clearfix */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 /* 링크 스타일 */
@@ -175,8 +184,8 @@ a {
   font-family: 'fontello';
   display: inline-block;
   width: 1em;
-  margin-right: .2em;
-  margin-left: .2em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
 }
 
 .sub-menu a:hover::before,
@@ -258,7 +267,7 @@ a {
 
 .visual::before,
 .visual::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -312,6 +321,104 @@ a {
   width: 190px;
 }
 
+/* 로그인 */
+.login {
+  background-color: #db5629;
+  padding: 10px;
+  background-image: radial-gradient(circle at right top, #ef962f, #db5629);
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+.login-heading {
+  /* background-color: blue; */
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 1em;
+  color: yellow;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* em은 글자크기를 상속 받기 떄문에 1em을주면 자연스럽게 사용할수있다. */
+}
+
+.login-form {
+  border-radius: 5px 5px 0 0;
+  background-color: #fff;
+  padding: 10px 10px 0;
+}
+.login-form fieldset {
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+}
+
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 0.5em;
+}
+
+.login-form div {
+  width: 150px;
+  margin-bottom: 5px;
+  /* background: yellow; */
+}
+
+.login-form label {
+  /* background-color: lime; */
+  display: inline-block;
+  width: 55px;
+}
+
+.btn-login {
+  width: 50px;
+  height: 52px;
+  border-radius: 3px;
+  border: 0;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  background: #db5629;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.member-only {
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  list-style: none;
+}
+
+.member-only li:first-child {
+  float: left;
+}
+
+.member-only li:last-child {
+  float: right;
+}
+
+.member-only a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.member-only a::before {
+  content: '\e803';
+  font-family: 'fontello';
+  display: inline-block;
+  margin-right: 0.2em;
+  color: #db5629;
+}
+
+/* 슬로건 */
 .slogan {
   background-color: orange;
 }
