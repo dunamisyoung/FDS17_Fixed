@@ -1,4 +1,4 @@
-@import url(css/normalize.css);
+@import url(./css/normalize.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(./css/fontello.css);
 /* @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css); */
@@ -49,12 +49,12 @@ a {
 
 /* 레이아웃 */
 
-.container {
+/* .container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: center;
-}
+} */
 
 .header,
 .visual,
@@ -62,6 +62,8 @@ a {
 .slogan,
 .footer {
   width: 940px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* header */
@@ -69,7 +71,7 @@ a {
   position: relative;
   background-color: #fff;
   border-radius: 0 0 15px 15px;
-  padding: 0 30px 0 30px;
+  padding: 1px 30px;
 }
 
 /* logo */
@@ -297,7 +299,8 @@ a {
 
 /* 메인 콘텐츠 */
 .main {
-  background-color: blue;
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
   min-height: 450px;
   padding: 30px;
   display: flex;
@@ -307,17 +310,17 @@ a {
 }
 
 .group1 {
-  background-color: pink;
+  /* background-color: pink; */
   width: 250px;
 }
 
 .group2 {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   width: 380px;
 }
 
 .group3 {
-  background-color: coral;
+  /* background-color: coral; */
   width: 190px;
 }
 
@@ -421,14 +424,14 @@ a {
 
 /* 유효성 검사 배너 링크 */
 .validation-list {
+  list-style: none;
   margin: 0;
   padding-left: 0;
   margin-top: 25px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .validation-list li a {
-  list-style: none;
   display: block;
   padding: 8px 10px 8px 45px;
   margin-top: 10px;
@@ -442,6 +445,124 @@ a {
 
 .validation-list li a:hover {
   color: #f00;
+}
+
+/* .term {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: #ccc linear-gradient(180deg, #fff, #aaa);
+}
+
+.term-heading {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.term-list {
+  margin: 0;
+}
+
+.term-list-subject {
+  margin: 0;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: dodgerblue;
+}
+
+.term-list-thumbnail {
+  margin: 0;
+  float: left;
+  padding: 0 10px 0 0;
+}
+
+.term-list-brief {
+  font-weight: 400;
+}
+
+.term-list-brief a {
+  line-height: 1.4;
+} */
+
+/* 웹 관련 용어 */
+.term {
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.term-heading {
+  /* background: yellow; */
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.term-list {
+  margin: 0;
+}
+
+.term-list > div {
+  margin-top: 10px;
+}
+
+/* odd */
+
+.odd {
+  /* background: yellow; */
+}
+
+.term > div::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.term-list-subject {
+  color: #226699;
+}
+
+.term-list-subject,
+.term-list-brief {
+  float: right;
+  /* background: lime; */
+  width: 145px;
+}
+
+.term-list-thumbnail {
+  margin-left: 0;
+  float: left;
+  /* background: orange; */
+}
+
+.term-list-thumbnail img {
+  vertical-align: middle;
+}
+
+.term-list-brief {
+  margin-top: 5px;
+  margin-left: 0;
+}
+
+.term-list-brief a {
+}
+
+.even {
+}
+
+/* even */
+
+.even .term-list-subject,
+.even .term-list-brief {
+  float: left;
+}
+
+.even .term-list-thumbnail {
+  float: right;
 }
 
 /* 슬로건 */
