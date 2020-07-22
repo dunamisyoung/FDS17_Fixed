@@ -129,7 +129,7 @@
               <li><a href="#">아이디/비밀번호 찾기</a></li>
             </ul>
           </section>
-          <h2 class="a11y-hidden">우효성 검사배너</h2>
+          <h2 class="a11y-hidden">유효성 검사배너</h2>
           <ul class="validation-list">
             <li><a href="#" target="_blank" title="마크업 유효성 검사로 이동 (새창)">W3C Markup Validation</a></li>
             <li><a href="#" target="_blank" title="CSS 유효성 검사로 이동 (새창)">CSS Validation Service</a></li>
@@ -162,7 +162,19 @@
             </dl>
           </section>
         </div>
-        <div class="group group2">group2</div>
+        <div class="group group2">
+          <h2 class="a11y-hidden">검색</h2>
+          <form action="http://formspree.io/mwkrwgrg" method="POST" class="search-form">
+            <fieldset>
+              <legend>검색폼</legend>
+              <div role="group">
+                <label for="search">자료검색</label>
+                <input type="search" id="search" required placeholder="검색어를 입력하세요." name="search" />
+                <button type="submit" class="btn-search">검색</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
         <div class="group group3">group3</div>
       </main>
       <article class="slogan">slogan</article>
