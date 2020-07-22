@@ -611,7 +611,7 @@ a {
   border-radius: 3px;
   color: #fff;
   background-color: #222;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   height: 24px;
   padding: 0 10px;
 }
@@ -619,6 +619,69 @@ a {
 .btn-search,
 .search-form fieldset label {
   white-space: nowrap;
+}
+
+/* 탭 메뉴 */
+.board {
+  position: relative;
+  background-color: powderblue;
+}
+
+.board section {
+  position: absolute;
+  /* background-color: #fff; */
+}
+
+.board section h2 {
+  display: inline-block;
+  border: 1px solid red;
+  padding: 10px;
+  font-weight: 400;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 0;
+  font-size: 1.4rem;
+}
+
+.board section ul {
+  margin: 0;
+  padding: 0 0 0 10px;
+  list-style: none;
+  background-color: #fff;
+}
+
+.board section ul li {
+  width: 100%;
+  height: 100%;
+  line-height: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.board section ul li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70%;
+  float: left;
+}
+
+.board section ul li time {
+  margin: 0;
+  padding: 0;
+  width: 30%;
+}
+
+.notice-heading {
+  /* background: #444; */
+}
+.pds-heading {
+  margin-left: 72px;
+  background: #444;
+}
+
+.icon-plus {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* 슬로건 */
