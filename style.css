@@ -620,16 +620,15 @@ a {
 .search-form fieldset label {
   white-space: nowrap;
 }
-
 /* 탭 메뉴 */
-.board {
+/* .board {
   margin-top: 20px;
   position: relative;
 }
 
 .notice,
 .pds {
-  /* display: none; */
+  display: none;
   position: absolute;
 }
 
@@ -713,67 +712,114 @@ a {
   top: 8px;
   right: 0;
   color: green;
-}
+} */
 
-/* .board {
+/* 공지 사항 및 자료실 */
+.board {
   position: relative;
-  background-color: powderblue;
+  background-color: yellow;
+  margin-top: 20px;
+  min-height: 180px;
 }
 
-.board section {
-  position: absolute;
-}
-
-.board section h2 {
-  display: inline-block;
-  border: 1px solid red;
-  padding: 10px;
-  font-weight: 400;
-  border-radius: 10px 10px 0 0;
-  border-bottom: 0;
-  font-size: 1.4rem;
-}
-
-.board section ul {
+.notice-heading,
+.pds-heading {
+  background-color: pink;
+  float: left;
   margin: 0;
-  padding: 0 0 0 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.tab {
+  display: block;
+  color: #666;
+  border: 1px solid#aaa;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+}
+.tab-act .tab {
+  color: #db5629;
+  border-color: #db5629 #db5629 #fff #db5629;
+  background: #fff;
+}
+
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
+  display: none;
+}
+
+.tab-act .notice-list,
+.tab-act .pds-list,
+.tab-act .notice-more,
+.tab-act .pds-more {
+  display: block;
+}
+
+.notice-list,
+.pds-list {
+  background-color: silver;
   list-style: none;
-  background-color: #fff;
-}
-
-.board section ul li {
+  margin: 0;
+  padding-left: 0;
+  position: absolute;
+  top: 45px;
+  left: 0;
   width: 100%;
-  height: 100%;
-  line-height: 2.5rem;
-  margin-bottom: 5px;
 }
 
-.board section ul li a {
+.notice-list a::before,
+.pds-list a::before {
+  content: '\f192';
+  font-family: 'fontello';
+  margin-right: 0.2em;
+  vertical-align: middle;
+}
+
+.notice-list li::after,
+.pds-list li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.notice-list a,
+.psd-list a {
+  width: 300px;
+  float: left;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 70%;
-  float: left;
+  background-color: skyblue;
 }
 
-.board section ul li time {
-  margin: 0;
-  padding: 0;
-  width: 30%;
+.notice-list time,
+.pds-list time {
+  background-color: violet;
+  float: right;
 }
 
-.notice-heading {
-}
-.pds-heading {
-  margin-left: 72px;
-  background: #444;
+.notice-list li,
+.pds-list li {
+  background-color: orange;
+  margin-bottom: 10px;
 }
 
-.icon-plus {
+.notice-more,
+.pds-more {
+  /* background-color: lime; */
   position: absolute;
-  top: 0;
-  right: 0;
-} */
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.icon-plus::before {
+  color: hsla(110, 70%, 50%, 1);
+}
 
 /* 슬로건 */
 .slogan {
