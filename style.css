@@ -162,12 +162,17 @@ a {
 
 .sub-menu {
   /* background-color: pink; */
+  display: none;
   position: absolute;
   margin: 0;
   padding-left: 0;
   list-style: none;
   white-space: nowrap;
   /* white-space : nowrap = 강제 줄바꿈 금지 */
+}
+
+.menu-act .sub-menu {
+  display: block;
 }
 
 .sub-menu li,
@@ -208,7 +213,7 @@ a {
 }
 
 .sub-menu1 {
-  display: block;
+  display: none;
 }
 
 .sub-menu2 {
@@ -717,18 +722,29 @@ a {
 /* 공지 사항 및 자료실 */
 .board {
   position: relative;
-  background-color: yellow;
+  /* background-color: yellow; */
   margin-top: 20px;
+  padding-top: 45px;
   min-height: 180px;
 }
 
 .notice-heading,
 .pds-heading {
-  background-color: pink;
+  /* background-color: pink; */
   float: left;
   margin: 0;
   font-size: 1.4rem;
   font-weight: 400;
+  position: absolute;
+  top: 0;
+}
+
+.notice-heading {
+  left: 0;
+}
+
+.pds-heading {
+  left: 73px;
 }
 
 .tab {
@@ -761,14 +777,11 @@ a {
 
 .notice-list,
 .pds-list {
-  background-color: silver;
+  /* background-color: silver; */
   list-style: none;
   margin: 0;
   padding-left: 0;
-  position: absolute;
-  top: 45px;
-  left: 0;
-  width: 100%;
+  min-height: 130px;
 }
 
 .notice-list a::before,
@@ -793,24 +806,23 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: skyblue;
+  /* background-color: skyblue; */
 }
 
 .notice-list time,
 .pds-list time {
-  background-color: violet;
+  /* background-color: violet; */
   float: right;
 }
 
 .notice-list li,
 .pds-list li {
-  background-color: orange;
+  /* background-color: orange; */
   margin-bottom: 10px;
 }
 
 .notice-more,
 .pds-more {
-  /* background-color: lime; */
   position: absolute;
   top: -8px;
   right: -8px;
