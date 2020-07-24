@@ -885,7 +885,7 @@ a {
   right: -8px;
 }
 
-/* 신규 이벤트 및 관련 사이트 */
+/* 신규 이벤트 및 관련 사이트 , 인기사이트*/
 
 /* 신규이벤트 */
 
@@ -902,13 +902,15 @@ a {
 }
 
 .event-heading,
-.related-heading {
+.related-heading,
+.favorite-heading {
   font-size: 1.6rem;
   margin: 0;
 }
 
 .event-heading span,
-.related-heading span {
+.related-heading span,
+.favorite-heading span {
   color: #db5629;
 }
 
@@ -979,6 +981,81 @@ a {
 .related-list:hover {
   height: 147px;
   padding: 10px 0;
+}
+
+/* 인기 사이트 */
+
+.group .gradient-box:nth-child(2) {
+  margin-top: 20px;
+}
+
+.favorite {
+  position: relative;
+}
+
+.favorite-list {
+  margin: 10px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.favorite-list li {
+  counter-increment: number;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.favorite-list li::before {
+  content: counter(number);
+  display: inline-block;
+  padding: 2px 5px;
+  color: #fff;
+  background-color: #aaa;
+  border-radius: 2px;
+  margin-right: 5px;
+  font-size: 1.3rem;
+}
+
+.favorite-list a {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.up,
+.down,
+.stop {
+  display: inline-block;
+  font-style: normal;
+  background-image: url(./css/images/rank.png);
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 11px;
+  padding-top: 11px;
+  overflow: hidden;
+  top: 50%;
+  right: 0;
+  margin: -5px 0;
+}
+
+.up {
+  background-position: 0 0;
+}
+
+.stop {
+  background-position: 0 50%;
+}
+
+.down {
+  background-position: 0 100%;
+}
+
+.favorite-more {
+  position: absolute;
+  padding: 8px;
+  top: -8px;
+  right: -8px;
 }
 
 /* 슬로건 */
