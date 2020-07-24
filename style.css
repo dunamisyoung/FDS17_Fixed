@@ -719,7 +719,7 @@ a {
 /* 공지 사항 및 자료실 */
 .board {
   position: relative;
-  background-color: yellow;
+  /* background-color: yellow; */
   margin-top: 20px;
   min-height: 180px;
 }
@@ -763,7 +763,7 @@ a {
 
 .notice-list,
 .pds-list {
-  background-color: silver;
+  /* background-color: silver; */
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -779,6 +779,7 @@ a {
   font-family: 'fontello';
   margin-right: 0.2em;
   vertical-align: middle;
+  vertical-align: bottom;
 }
 
 .notice-list li::after,
@@ -795,18 +796,17 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: skyblue;
+  /* background-color: skyblue; */
 }
 
 .notice-list time,
 .pds-list time {
-  background-color: violet;
   float: right;
+  vertical-align: bottom;
 }
 
 .notice-list li,
 .pds-list li {
-  background-color: orange;
   margin-bottom: 10px;
 }
 
@@ -883,7 +883,6 @@ a {
   padding: 8px;
   top: -8px;
   right: -8px;
-  background-color: skyblue;
 }
 
 /* 신규 이벤트 및 관련 사이트 */
@@ -898,17 +897,18 @@ a {
 }
 
 .event {
-  background: yellow;
-  border: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
   position: relative;
 }
 
-.event-heading {
+.event-heading,
+.related-heading {
   font-size: 1.6rem;
   margin: 0;
 }
 
-.event-heading span {
+.event-heading span,
+.related-heading span {
   color: #db5629;
 }
 
@@ -930,7 +930,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .btn-prev,
@@ -946,6 +946,39 @@ a {
 
 .btn-next {
   background-position: -36px 0;
+}
+
+/* 관련사이트 */
+
+.related {
+  margin-top: 10px;
+}
+
+.related-list {
+  height: 27px;
+  overflow: hidden;
+  background-color: #fff;
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  transition: all 200ms;
+}
+
+.related-list li {
+  padding: 2px 5px;
+}
+
+.related-list a {
+  display: block;
+  line-height: 21px;
+  text-indent: 1em;
+}
+
+.related-list:hover {
+  height: 147px;
+  padding: 10px 0;
 }
 
 /* 슬로건 */
