@@ -32,6 +32,8 @@ legend {
   overflow: hidden;
   margin: -1px;
   clip-path: polygon(0 0, 0 0, 0 0);
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
 }
 
 /* clearfix */
@@ -882,6 +884,68 @@ a {
   top: -8px;
   right: -8px;
   background-color: skyblue;
+}
+
+/* 신규 이벤트 및 관련 사이트 */
+
+/* 신규이벤트 */
+
+.gradient-box {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+}
+
+.event {
+  background: yellow;
+  border: 1px solid #aaa;
+  position: relative;
+}
+
+.event-heading {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.event-heading span {
+  color: #db5629;
+}
+
+.event-thumnail,
+.event-brief {
+  margin: 10px 0;
+}
+
+.event-thumnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #999;
+}
+
+.event-brief em {
+  font-style: normal;
+}
+
+.btn-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: pink;
+}
+
+.btn-prev,
+.btn-next {
+  background: #ccc url(./css/images/back_forward.png) no-repeat;
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.btn-next {
+  background-position: -36px 0;
 }
 
 /* 슬로건 */
