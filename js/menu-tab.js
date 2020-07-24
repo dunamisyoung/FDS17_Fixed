@@ -1,5 +1,4 @@
 //FIND DOMELOAD 돔 로드 찾기 Document object model에서 구현할 node 찾기
-
 var items = $('.menu-item');
 var btn = $('.btn-menu');
 var panel = $('.board section');

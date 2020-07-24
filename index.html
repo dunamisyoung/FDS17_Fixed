@@ -5,8 +5,8 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>웹카페-고정형 레이아웃</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/menu-tab.js"></script>
+    <script src="./js/jquery.min.js" defer></script>
+    <script src="./js/menu-tab.js" defer></script>
   </head>
 
   <body>
@@ -133,8 +133,16 @@
           </section>
           <h2 class="a11y-hidden">유효성 검사배너</h2>
           <ul class="validation-list">
-            <li><a href="#" target="_blank" title="마크업 유효성 검사로 이동 (새창)">W3C Markup Validation</a></li>
-            <li><a href="#" target="_blank" title="CSS 유효성 검사로 이동 (새창)">CSS Validation Service</a></li>
+            <li>
+              <a href="https://validator.w3.org/" target="_blank" title="마크업 유효성 검사로 이동 (새창)"
+                >W3C Markup Validation</a
+              >
+            </li>
+            <li>
+              <a href="https://jigsaw.w3.org/css-validator/" target="_blank" title="CSS 유효성 검사로 이동 (새창)"
+                >CSS Validation Service</a
+              >
+            </li>
           </ul>
           <section class="term">
             <h2 class="term-heading">웹 관련 용어</h2>

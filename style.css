@@ -741,6 +741,7 @@ a {
   padding: 5px 10px;
   background: #ccc linear-gradient(180deg, #ccc, #eee);
 }
+
 .tab-act .tab {
   color: #db5629;
   border-color: #db5629 #db5629 #fff #db5629;
