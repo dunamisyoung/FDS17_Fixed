@@ -1105,14 +1105,125 @@ a {
 .slogan-brief q::after {
   content: '';
 }
-.footer-bg {
+
+/* .footer-bg {
   width: 100%;
-  background-color: purple;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
 }
 
 .footer {
-  background-color: skyblue;
+  padding-bottom: 10px;
+  position: relative;
+  padding-left: 170px;
 }
+
+.footer-logo {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+
+.guide-list {
+  display: inline-block;
+  list-style: none;
+  padding: 0px 25px;
+  background-color: #999;
+  border-radius: 10px;
+}
+.guide-list li {
+  display: inline-block;
+  font-weight: 500;
+}
+.guide-list li a {
+  text-transform: uppercase;
+  padding: 10px 15px;
+  display: block;
+  color: #fff;
+}
+
+.address {
+  font-style: normal;
+  font-weight: 400;
+}
+
+small {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.badge {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.badge img {
+  cursor: pointer;
+} */
+
+.footer {
+  padding-right: 100px;
+  padding-left: 170px;
+  position: relative;
+}
+.footer-bg {
+  width: 100%;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 푸터로고 */
+.footer-logo {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+/* 가이드 링크 */
+.guide-list {
+  background-color: #7b8385;
+  color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: 5px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 4px 20px;
+  list-style: none;
+}
+
+.guide-list a {
+  /* background-color: blue; */
+  display: block;
+  padding: 6px 15px;
+  text-transform: uppercase;
+}
+
+/* 주소 및 연락처 */
+.address {
+  font-style: normal;
+  font-weight: ;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.address span {
+  margin-right: 10px;
+}
+/* 저작권 */
+.copyright {
+  font-size: 1.4rem;
+  display: block;
+}
+/* 적용 기술 배지 */
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* 푸터로고 */
